@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Honolulu Trading Company</title>
+  <link href="styles.css" rel="stylesheet" />
+</head>
+<body>
+  <header>
+    <h1>Honolulu Trading Company</h1>
+    <p class="tagline">Investitionen an der Börse – Qualität trifft Zuverlässigkeit</p>
+  </header>
+
+  <main>
+    <section class="about">
+      <h2>Über uns</h2>
+      <p>
+        Die Honolulu Trading Company steht für unabhängige, analytische und
+        nachhaltige Investments. Wir nutzen moderne Technologien und
+        transparente Strategien, um Chancen an den internationalen
+        Kapitalmärkten zu identifizieren und zu nutzen.
+      </p>
+    </section>
+
+    <section class="services">
+      <h2>Unsere Leistungen</h2>
+      <ul>
+        <li>Analyse von Aktien, Indizes und ETFs</li>
+        <li>Strategieberatung für langfristige Investments</li>
+        <li>Research zu Markttrends und Risikomanagement</li>
+        <li>Individuelle Portfolio‑Optimierung</li>
+      </ul>
+    </section>
+  </main>
+
+  <!-- Ticker der wichtigsten Indizes: TradingView Widget -->
+  <section class="ticker-section">
+    <h2>Marktüberblick</h2>
+    <div class="tradingview-widget-container">
+      <div class="tradingview-widget-container__widget"></div>
+      <script type="text/javascript"
+        src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+      {
+        "symbols": [
+          { "proName": "FOREXCOM:SPXUSD", "title": "S&P 500" },
+          { "proName": "FOREXCOM:NSXUSD", "title": "NASDAQ 100" },
+          { "proName": "FOREXCOM:DJI", "title": "Dow Jones" },
+          { "proName": "INDEX:DEU40", "title": "DAX 40" },
+          { "proName": "INDEX:SX5E", "title": "Euro Stoxx 50" }
+        ],
+        "colorTheme": "dark",
+        "isTransparent": false,
+        "displayMode": "adaptive",
+        "locale": "de"
+      }
+      </script>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Honolulu Trading Company – alle Rechte vorbehalten.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
